@@ -1,0 +1,39 @@
+body {
+  background-image: url('/image/nordwood-themes-nDd3dIkkOLo-unsplash.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.formLogin {
+  margin-left: 35%;
+  margin-right: 35%;
+  margin-top: 2%;
+  background-color: rgba(204, 204, 204, 0.555);
+  padding: 20px;
+  border-radius: 5px;
+  border: 2px solid black;
+}
+
+.formLogin h3 {
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+.alert {
+  margin-top: 20px;
+  margin-left: 35%;
+  margin-right: 35%;
+  text-align: center;
+}
+
+.formLogin a {
+  padding-left: 90px;
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+}
+
+.formLogin a:hover {
+  color: aliceblue;
+}

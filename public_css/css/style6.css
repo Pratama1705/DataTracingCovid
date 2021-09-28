@@ -1,0 +1,49 @@
+body {
+  background-color: beige;
+}
+
+.navbar {
+  background-color: rgb(197, 194, 197);
+}
+
+.navbar .container-fluid .navbar-brand {
+  padding-left: 2.5%;
+  color: rgb(255, 255, 255);
+}
+
+.navbar .container-fluid .collapse {
+  padding-left: 70%;
+}
+
+.navbar .container-fluid .collapse .nav-item .nav-link {
+  color: aliceblue;
+}
+
+.navbar .container-fluid .collapse .navbar-nav .nav-item .nav-link:hover {
+  color: rgb(12, 12, 12);
+  padding-top: 1px;
+}
+
+.detail {
+  text-align: center;
+  margin-left: 10%;
+  margin-right: 60%;
+  background-color: rgb(202, 225, 226);
+  margin-top: -31%;
+  padding: 10px;
+  border: 2px solid black;
+  border-radius: 5px;
+}
+
+.detail .provinsi-judul {
+  padding-bottom: 15px;
+}
+
+#googleMap {
+  width: 50%;
+  margin-top: 30px;
+  margin-left: 45%;
+  height: 400px;
+  border: 2px solid black;
+  border-radius: 5px;
+}

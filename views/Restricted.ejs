@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous" />
+    <link rel="stylesheet" href="./css/style4.css" />
+
+    <title>Covid Di Indonesia</title>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Covid Data Tracing</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="/dataProv">Provinsi</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="body">
+      <!-- Welcome -->
+      <div class="awalan">
+        <h3 class="sapaan"><%= locals.message %></h3>
+        <h6 class="tanggal"><%= locals.tanggal %></h6>
+      </div>
+
+      <!-- Data kumulatif Kasus -->
+      <div class="kasusIndo">
+        <h3 class="penjelasan-status">Status Covid Di Indonesia Saat Ini</h3>
+        <p class="kumulatif_data">Jumlah Kasus Positif : <%= JSON.stringify(locals.dataKum.positif_kumulatif) %></p>
+        <p class="kumulatif_data">Jumlah Penambahan Kasus Positif : <%= JSON.stringify(locals.dataKum.positif) %></p>
+        <p class="kumulatif_data">Jumlah Total Kesembuhan : <%= JSON.stringify(locals.dataKum.sembuh_kumulatif) %></p>
+        <p class="kumulatif_data">Jumlah Penambahan Kesembuhan : <%= JSON.stringify(locals.dataKum.sembuh) %></p>
+        <p class="kumulatif_data">Jumlah Total Kematian : <%= JSON.stringify(locals.dataKum.meninggal_kumulatif) %></p>
+        <p class="kumulatif_data">Jumlah Penambahan Kematian : <%= JSON.stringify(locals.dataKum.meninggal) %></p>
+        <p class="kumulatif_data">Tanggal API Di Update : <%= JSON.stringify(locals.dataKum.tanggal).substring(1, 11) %></p>
+      </div>
+
+      <!-- Data kumulatif Vaksin -->
+      <div class="kasusIndoVaksin">
+        <h3 class="penjelasan-status">Status Vaksinasi Di Indonesia Saat Ini</h3>
+        <p class="kumulatif_data">Jumlah Vaksinasi : <%= JSON.stringify(locals.dataVak.totalsasaran) %></p>
+        <p class="kumulatif_data">Jumlah Vaksinasi Rakyat Sipil : <%= JSON.stringify(locals.dataVak.sasaranvaksinsdmk) %></p>
+        <p class="kumulatif_data">Jumlah Vaksinasi Lansia : <%= JSON.stringify(locals.dataVak.sasaranvaksinlansia) %></p>
+        <p class="kumulatif_data">Jumlah Vaksinasi Petugas Publik : <%= JSON.stringify(locals.dataVak.sasaranvaksinpetugaspublik) %></p>
+        <p class="kumulatif_data">Jumlah Selesai Vaksinasi Tahap 1 : <%= JSON.stringify(locals.dataVak.vaksinasi1) %></p>
+        <p class="kumulatif_data">Jumlah Selesai Vaksinasi Tahap 2 : <%= JSON.stringify(locals.dataVak.vaksinasi2) %></p>
+        <p class="kumulatif_data">Tanggal API Di Update : <%= JSON.stringify(locals.dataVak.lastUpdate).substring(1, 11) %></p>
+      </div>
+
+      <!-- Logout -->
+      <button class="logout">
+        <a class="logoutLink" href="/logout">Logout</a>
+      </button>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+  </body>
+</html>

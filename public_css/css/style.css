@@ -1,0 +1,43 @@
+body {
+  background-image: url('/image/kelly-sikkema-WIYtZU3PxsI-unsplash.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.navbar {
+  background-color: transparent;
+}
+
+.navbar .container-fluid .navbar-brand {
+  color: rgb(255, 255, 255);
+  padding-left: 50px;
+  font-weight: bold;
+}
+
+.navbar .container-fluid .satu {
+  color: aliceblue;
+  padding-right: 50px;
+  text-decoration: none;
+}
+
+.navbar .container-fluid .dua {
+  color: aliceblue;
+  padding-right: 50px;
+  text-decoration: none;
+}
+
+.text {
+  margin-top: 15%;
+  text-align: center;
+}
+
+.text p {
+  color: rgb(255, 255, 255);
+  font-size: 40px;
+}
+
+.text p span {
+  color: aqua;
+}

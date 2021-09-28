@@ -1,0 +1,108 @@
+body {
+  background-image: url('/image/ivan-diaz-_ts3NfjvaXo-unsplash.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.body {
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.navbar {
+  background-color: rgb(197, 194, 197);
+}
+
+.navbar .container-fluid .navbar-brand {
+  padding-left: 2.5%;
+  color: rgb(255, 255, 255);
+}
+
+.navbar .container-fluid .collapse {
+  padding-left: 75%;
+}
+
+.navbar .container-fluid .collapse .nav-item .nav-link {
+  color: aliceblue;
+}
+
+.navbar .container-fluid .collapse .navbar-nav .nav-item .nav-link:hover {
+  color: rgb(12, 12, 12);
+  padding-top: 1px;
+}
+
+.awalan .sapaan {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.awalan .tanggal {
+  float: right;
+  margin-top: -4%;
+}
+
+.body .kasusIndo {
+  background-color: rgba(255, 202, 202, 0.8);
+  margin-right: 55%;
+  margin-left: 9%;
+  text-align: center;
+  border: 2px solid black;
+  border-radius: 5px;
+}
+
+.body .kasusIndo .penjelasan-status {
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+
+.body .kasusIndo p {
+  color: rgb(0, 41, 77);
+  font-size: large;
+}
+
+.body .kasusIndoVaksin {
+  margin-top: 10px;
+  background-color: rgb(188, 198, 255, 0.8);
+  margin-right: 9%;
+  margin-left: 52%;
+  margin-top: -33.5%;
+  text-align: center;
+  border: 2px solid black;
+  border-radius: 5px;
+}
+
+.body .kasusIndoVaksin .penjelasan-status {
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+
+.body .kasusIndoVaksin p {
+  color: rgb(0, 77, 10);
+  font-size: large;
+}
+
+.body .logout {
+  margin-left: 46%;
+  margin-right: 46.5%;
+  background-color: rgb(241, 255, 239);
+  padding: 5px;
+  text-align: center;
+  margin-top: 2.5%;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+.body .logout:hover {
+  background-color: rgb(255, 154, 31);
+}
+
+.body .logout .logoutLink:hover {
+  color: rgb(255, 255, 255);
+}
+
+.body .logout .logoutLink {
+  text-decoration: none;
+  color: black;
+}

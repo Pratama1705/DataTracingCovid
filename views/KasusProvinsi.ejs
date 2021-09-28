@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous" />
+    <link rel="stylesheet" href="./css/style5.css" />
+
+    <title>Covid Per Provinsi</title>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Covid Data Tracing</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="/restricted">Home</a>
+            </li>
+          </ul>
+          <form class="d-flex" action="/detail" , method="POST">
+            <input id="value" class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="namaProv" />
+            <button id="btnSearch" class="btn btn-outline-success" type="submit">Search</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Alert if any error ocured -->
+    <% if (locals.messageTidakKetemu) { %>
+      <div class="alert alert-danger" role="alert"><%= locals.messageTidakKetemu %></div>
+    <% } %>
+
+    <!-- Isi -->
+    <div id="list_prov" class="isi">
+      <h3>Kasus Covid Setiap Provinsi Di Indonesia</h3>
+      <% for (var i = 0; i < locals.message.length - 1; i++) { %> <% if (i % 2 == 0) { %>
+      <div class="isi2">
+        <h5 class="namaProv"><%= JSON.stringify(locals.message[i].key).replaceAll('"', ''); %></h5>
+        <p>Jumlah Kasus : <%= JSON.stringify(locals.message[i].jumlah_kasus) %></p>
+        <p>Jumlah Dirawat : <%= JSON.stringify(locals.message[i].jumlah_dirawat) %></p>
+        <p>Jumlah Sembuh : <%= JSON.stringify(locals.message[i].jumlah_sembuh) %></p>
+        <p>Jumlah Meninggal : <%= JSON.stringify(locals.message[i].jumlah_meninggal) %></p>
+        <button><a href="/detail/<%= JSON.stringify(locals.message[i].key) %> ">Detail</a></button>
+      </div>
+      <% } %> <% } %>
+
+      <div class="ayo">
+        <% for (var i = 0; i < locals.message.length - 1; i++) { %> <% if (i % 2 == 1) { %>
+        <div class="isi2-2">
+          <h5 id="<%= JSON.stringify(locals.message[i].key).replaceAll('"', ''); %>" class="namaProv"><%= JSON.stringify(locals.message[i].key).replaceAll('"', ''); %></h5>
+          <p>Jumlah Kasus : <%= JSON.stringify(locals.message[i].jumlah_kasus) %></p>
+          <p>Jumlah Dirawat : <%= JSON.stringify(locals.message[i].jumlah_dirawat) %></p>
+          <p>Jumlah Sembuh : <%= JSON.stringify(locals.message[i].jumlah_sembuh) %></p>
+          <p>Jumlah Meninggal : <%= JSON.stringify(locals.message[i].jumlah_meninggal) %></p>
+          <button><a href="/detail/<%= JSON.stringify(locals.message[i].key) %> ">Detail</a></button>
+        </div>
+        <% } %> <% } %>
+      </div>
+    </div>
+
+    <script defer>
+      var searchButton = document.getElementById('btnSearch');
+      searchButton.addEventListener('click', (e) => {
+        const hasil = document.getElementById('value').value;
+        console.log(hasil);
+      });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+  </body>
+</html>

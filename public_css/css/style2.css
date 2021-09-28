@@ -1,0 +1,39 @@
+body {
+  background-image: url("/image/sarah-dorweiler-2s9aHF4eCjI-unsplash.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.formRegis {
+  margin-left: 35%;
+  margin-right: 35%;
+  margin-top: 2%;
+  background-color: rgba(218, 218, 218, 0.658);
+  padding: 20px;
+  border-radius: 5px;
+  border: 2px solid black;
+}
+
+.formRegis h3 {
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.formRegis a {
+    padding-left: 120px;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}
+
+.formRegis a:hover {
+    color: aliceblue;
+}
+
+.alert {
+  margin-top: 20px;
+  margin-left: 35%;
+  margin-right: 35%;
+  text-align: center;
+}
